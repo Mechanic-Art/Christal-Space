@@ -1,0 +1,169 @@
+.site-logo {
+  position: fixed;
+  /* doit être fixed pour sortir du cadre centré */
+  top: 20px;
+  right: 30px;
+  height: 48px;
+  margin-bottom: 0;
+  z-index: 9999;
+  /* plus élevé pour être au-dessus de tout */
+  pointer-events: auto;
+}
+
+body {
+  position: relative;
+  font-family: monospace;
+  background-color: #16181b;
+  color: #ffffff;
+  padding: 2rem;
+  max-width: 700px;
+  margin: auto;
+  border: 2px solid #39FF14;
+  box-shadow: none;
+}
+
+nav {
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: rgb(30, 5, 250);
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* fenêtre windows 95 */
+
+.win95-window {
+  position: fixed;
+  top: 100px;
+  left: 30px;
+  border: 2px solid #39FF14;
+  background: #000;
+  width: 420px;
+  box-shadow: none;
+  font-family: 'Consolas', 'Courier New', monospace;
+  margin: 0;
+  z-index: 9999;
+}
+
+.win95-titlebar {
+  background: #000;
+  color: #ffffff;
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  border-bottom: 2px solid #39FF14;
+  font-family: inherit;
+  cursor: move;
+  /* Ajouté pour indiquer que la barre est déplaçable */
+}
+
+.win95-title {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: #39FF14;
+}
+
+.win95-close {
+  background: #000;
+  border: 2px solid #39FF14;
+  color: #39FF14;
+  width: 22px;
+  height: 22px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 8px;
+  padding: 0;
+}
+
+.win95-content {
+  padding: 16px;
+  background: #000;
+  color: #ffffff;
+  border-top: 2px solid #39FF14;
+  font-family: inherit;
+}
+
+
+/* Animation Matrix en bloc */
+.matrix-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  max-width: 700px;
+}
+
+#matrix {
+  position: static;
+  width: 100%;
+  max-width: 700px;
+  height: 300px;
+  display: block;
+  background: transparent;
+  border: none;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.main-body-wrapper {
+  max-width: 700px;
+  margin: auto;
+  border: 2px solid #39FF14;
+  box-shadow: none;
+  background: #16181b;
+  padding: 2rem;
+  position: relative;
+  border-radius: 6px;
+}
+
+.top-nav-window {
+  border: 2px solid #39FF14;
+  background: #000;
+  padding: 25px 24px;
+  /* plus d'espace à l'intérieur du bloc */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border-bottom: 2px solid #39FF14;
+  font-family: inherit;
+  margin: 0 auto;
+  /* retire l'espace extérieur vertical */
+}
+
+.top-nav-window nav {
+  margin: 0;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.nav-separator {
+  height: 2em;
+}
+
+.blablabla-box {
+  position: fixed;
+  top: 120px;
+  right: 30px;
+  width: 220px;
+  background: #222;
+  color: #fff;
+  border: 2px solid #39FF14;
+  border-radius: 6px;
+  padding: 1.2em;
+  z-index: 10000;
+  box-shadow: none;
+}
