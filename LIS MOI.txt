@@ -1,0 +1,20 @@
+pour lancer le serveur:
+
+npx @11ty/eleventy --serve
+
+
+pour suppr "site" et redémarrer proprement:
+
+Remove-Item -Recurse -Force _site
+
+
+pour voir en direct:
+
+npm start
+
+
+pour mettre à jour mon git:
+
+git add .
+git commit -m "Ton message ici (ex : Ajout de la page contact)"
+git push

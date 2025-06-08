@@ -5,45 +5,79 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="/style/main.css">
 
+
     <title>Le labo</title>
+    <link rel="stylesheet" href="style/main.css">
+    
   </head>
   <body>
-    <img src="/assets/logo.png" alt="Logo du site" class="site-logo">
+   <div class="page-layout">
+    
+    <!-- Colonne gauche -->
+    <aside class="side-column left-column">
+     <div class="win95-window">
+  <div class="win95-titlebar">
+    <span class="win95-title">Useless Window</span>
+    <button class="win95-close">✕</button>
+  </div>
+  <div class="win95-content">
+    <p>Je ne sais pas quoi mettre ici.</p>
+  </div>
+</div>
+<a href="/book" rel="noopener" class="book-btn">Book</a>
+<div id="app"></div>
+<iframe src="https://www5.cbox.ws/box/?boxid=957232&boxtag=7yqASs"  class="chatbox" allowtransparency="yes" allow="autoplay" frameborder="0" scrolling="auto"></iframe>
+    </aside>
 
-    <!-- Navigation hors du cadre bleu -->
-    <div class="top-nav-window">
-      <nav>
-        <a href="/">accueil</a> · 
-        <a href="/labo/">labo</a> ·
-        <a href="/art">art</a> ·
-        <a href="/stuff">stuff</a> ·
-        <a href="/about">à propos</a> · 
-        <a href="/contact">contact</a>
-      </nav>
-    </div>
-
-    <div class="nav-separator"></div>
-
-    <!-- Début du cadre bleu -->
-    <div class="main-body-wrapper">
+    <!-- Colonne centrale -->
+    <main class="main-column">
+<img src="assets/disquette.png" alt="titre" width="70px" class="titre">
       
+
+      <div class="main-content-block">
+        <div class="top-nav-window">
+          <nav>
+            <a href="/">accueil</a> | 
+            <a href="/labo/">labo</a> |
+            <a href="/art/">art</a> |
+            <a href="/stuff/">stuff</a> |
+            <a href="/about/">à propos</a> | 
+            <a href="/contact/">contact</a> 
+          </nav>
+        </div>
+
+ <div class="nav-separator"></div>
+
+<h1>Bienvenue dans ma zone internet 🌐</h1>
+<p>Un endroit pour les idées étranges et les tests improbables.</p>
+
+        <div class="main-body-wrapper">
+          
 <h1>Le Labo</h1>
 <p>Ici je teste des choses bizarres.</p>
 
-      <main>
-   
-      </main>
-    </div>
-    <!-- Fin du cadre bleu -->
+        </div>
 
-    <div class="matrix-container">
-      <canvas id="matrix"></canvas>
-    </div>
+        <div class="matrix-container">
+          <canvas id="matrix"></canvas>
+        </div>
+      </div>
+    </main>
 
-    <script type="module" src="/js/js_matrix/app.js"></script>
-    <script src="/js/script.js"></script>
-    <script src="/js/win95-drag.js"></script>
-    <script src="/js/winamp-drag.js"></script>
-    <script src="/js/oneko.js" data-cat="/assets/oneko.gif"></script>
-  </body>
+    <!-- Colonne droite -->
+    <aside class="side-column right-column">
+      <!-- Pareil ici, du visuel ou autre -->
+    </aside>
+
+  </div>
+
+  <script type="module" src="js/js_matrix/app.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/win95-drag.js"></script>
+  <script src="js/winamp-drag.js"></script>
+  <script src="js/oneko.js" data-cat="assets/oneko.gif"></script>
+  <script src="js/cursor-symbols.js"></script>
+<script src="https://unpkg.com/webamp"></script>
+<script src="js/winamp.js"></script>
+</body>
 </html>

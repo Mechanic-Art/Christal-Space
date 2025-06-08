@@ -1,39 +1,99 @@
-.site-logo {
-  position: fixed;
-  /* doit être fixed pour sortir du cadre centré */
-  top: 20px;
-  right: 30px;
-  height: 48px;
-  margin-bottom: 0;
-  z-index: 9999;
-  /* plus élevé pour être au-dessus de tout */
-  pointer-events: auto;
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #16181b;
+   font-family: monospace;
+  color: #ffffff;
+  box-sizing: border-box;
+
 }
 
-body {
-  position: relative;
-  font-family: monospace;
-  background-color: #16181b;
-  color: #ffffff;
-  padding: 2rem;
-  max-width: 700px;
-  margin: auto;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.page-layout {
+  display: grid;
+  grid-template-columns: 300px 800px 300px;
+  width: 1400px;
+  margin: 0 auto;
+  gap: 0;
+  height: 95vh;
+  background: #16181b;
+}
+
+.titre {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+.side-column,
+.main-column {
   border: 2px solid #39FF14;
-  box-shadow: none;
+  background: #0d0d0d;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
-nav {
-  margin-bottom: 2rem;
-  font-size: 0.9rem;
+.side-column {
+  background: #0d0d0d;
+  padding: 1rem;
+  border: 2px solid #39FF14;
 }
 
-a {
-  color: #ffffff;
-  text-decoration: underline;
+.left-column {
+  border-right: none;
 }
 
-a:hover {
-  color: rgb(30, 5, 250);
+.right-column {
+  border-left: none;
+}
+
+.main-column {
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #39FF14;
+  background: #0d0d0d;
+}
+
+/* NAVIGATION */
+.top-nav-window {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  border: 2px solid #39FF14;
+  background: #000;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.top-nav-window nav a {
+  margin: 0 1rem;
+  font-size: 1rem;
+  color: #39FF14;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.top-nav-window nav a:hover {
+  color: #fff;
+}
+
+.nav-separator {
+  height: 2em;
 }
 
 h1 {
@@ -41,17 +101,70 @@ h1 {
   margin-bottom: 1rem;
 }
 
-/* fenêtre windows 95 */
+/* ANIMATION MATRIX */
+.matrix-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 100%;
+  background: transparent;
+  padding: 0;
+}
 
+#matrix {
+  width: 100%;
+  max-width: 700px;
+  height: 300px;
+  display: block;
+  background: transparent;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* WRAPPER GLOBAL */
+.main-body-wrapper {
+  max-width: 100%;
+  margin: 0;
+  background: #16181b;
+  padding: 2rem;
+  position: relative;
+}
+
+/* CONTENU PRINCIPAL */
+.main-content-block {
+  max-width: 700px;
+  margin: 2rem auto;
+  border: 2px solid #39FF14;
+  background: #16181b;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 2rem;
+}
+
+/* logo 
+.site-logo {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  height: 48px;
+  z-index: 9999;
+  pointer-events: auto;
+} */
+
+/* FENÊTRE WINDOWS 95 */
 .win95-window {
   position: fixed;
-  top: 100px;
-  left: 30px;
+  top: 50px;
+  left: 271px;
   border: 2px solid #39FF14;
   background: #000;
-  width: 420px;
-  box-shadow: none;
-  font-family: 'Consolas', 'Courier New', monospace;
+  width: 280px;
+  font-family: monospace;
   margin: 0;
   z-index: 9999;
 }
@@ -67,7 +180,6 @@ h1 {
   border-bottom: 2px solid #39FF14;
   font-family: inherit;
   cursor: move;
-  /* Ajouté pour indiquer que la barre est déplaçable */
 }
 
 .win95-title {
@@ -86,6 +198,7 @@ h1 {
   cursor: pointer;
   margin-left: 8px;
   padding: 0;
+  
 }
 
 .win95-content {
@@ -96,74 +209,36 @@ h1 {
   font-family: inherit;
 }
 
-
-/* Animation Matrix en bloc */
-.matrix-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 2rem auto;
-  max-width: 700px;
-}
-
-#matrix {
-  position: static;
-  width: 100%;
-  max-width: 700px;
-  height: 300px;
-  display: block;
-  background: transparent;
-  border: none;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.main-body-wrapper {
-  max-width: 700px;
-  margin: auto;
-  border: 2px solid #39FF14;
-  box-shadow: none;
-  background: #16181b;
-  padding: 2rem;
-  position: relative;
-  border-radius: 6px;
-}
-
-.top-nav-window {
-  border: 2px solid #39FF14;
-  background: #000;
-  padding: 25px 24px;
-  /* plus d'espace à l'intérieur du bloc */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  border-bottom: 2px solid #39FF14;
-  font-family: inherit;
-  margin: 0 auto;
-  /* retire l'espace extérieur vertical */
-}
-
-.top-nav-window nav {
-  margin: 0;
-  font-size: 1rem;
-  text-align: center;
-}
-
-.nav-separator {
-  height: 2em;
-}
-
-.blablabla-box {
+.book-btn {
   position: fixed;
-  top: 120px;
-  right: 30px;
-  width: 220px;
-  background: #222;
+  left: 380px;
+  top: 170px;
+  z-index: 9999;
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  background: #000;
   color: #fff;
-  border: 2px solid #39FF14;
-  border-radius: 6px;
-  padding: 1.2em;
-  z-index: 10000;
-  box-shadow: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+.book-btn:hover {
+  background: #444;
+}
+
+#app {
+  position: fixed;
+  left: 411px;
+  top: 400px;
+  z-index: 9998;
+}
+
+.chatbox {
+  position: fixed;
+  left: 266px;
+  top: 661px;
+  width: 292px;
+  height: 250px;
 }
