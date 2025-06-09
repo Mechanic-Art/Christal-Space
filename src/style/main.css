@@ -32,6 +32,8 @@ body {
   margin-right: auto;
   overflow-clip-margin: content-box;
   overflow: clip;
+  width: 750px; /* Augmente la largeur de l'image */
+  max-width: 100%; 
 }
 
 .side-column,
