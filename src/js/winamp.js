@@ -17,4 +17,4 @@ window.webampInstance = new Webamp({
   ]
 });
 
-window.webampInstance.renderWhenReady(document.getElementById("app"));
+window.webampInstance.renderWhenReady(document.getElementById("winamp-container"));
