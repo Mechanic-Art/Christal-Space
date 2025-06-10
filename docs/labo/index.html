@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="/style/main.css">
+<link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet" />
 
 
     <title>Le labo</title>
@@ -24,8 +26,23 @@
     <p>Je ne sais pas quoi mettre ici.</p>
   </div>
 </div>
-<a href="/book" rel="noopener" class="book-btn">Book</a>
-<div id="winamp-container"></div>
+<a href="book" rel="noopener" class="nes-btn is-primary book-btn">Book</a>
+<div class="pixelsea-btn-wrapper">
+  <a href="https://pixelsea.neocities.org/">
+    <img src="/assets/pixelsea-badge.gif" alt="pixelsea" class="pixelsea">
+  </a>
+</div>
+
+<section class="nes-container">
+  <section class="message-list">
+    <section class="message -right">
+      <i class="nes-bcrikko"></i>
+      <!-- Balloon -->
+      <div class="nes-balloon from-left">
+        <p>Chat Box</p>
+      </div>
+    </section>
+    
 <iframe src="https://www5.cbox.ws/box/?boxid=957232&boxtag=7yqASs"  class="chatbox" allowtransparency="yes" allow="autoplay" frameborder="0" scrolling="auto"></iframe>
     </aside>
 
@@ -36,19 +53,20 @@
 
        <div class="main-content-block">
           <div class="top-nav-window">
-            <nav>
-              <a href="/">accueil</a> | 
-              <a href="/labo/">labo</a> |
-              <a href="/art/">art</a> |
-              <a href="/stuff/">stuff</a> |
-              <a href="/about/">à propos</a> | 
-              <a href="/contact/">contact</a> 
-            </nav>
+  <nav>
+    <a class="nes-btn" href="/">Accueil</a>
+    <a class="nes-btn is-primary" href="/labo/">Labo</a>
+    <a class="nes-btn is-success" href="/art/">Art</a>
+    <a class="nes-btn is-warning" href="/stuff/">Stuff</a>
+    <a class="nes-btn is-error" href="/about/">À propos</a>
+  </nav>
           </div>
 
           <div class="nav-separator"></div>
 
           
+
+         
 
           <div class="main-body-wrapper">
             
@@ -65,7 +83,18 @@
 
     <!-- Colonne droite -->
     <aside class="side-column right-column">
-      <!-- Pareil ici, du visuel ou autre -->
+      <div class="social-icons">
+        <a href="https://www.instagram.com/me.chanicart/" target="_blank" rel="noopener" aria-label="Instagram">
+          <i class="nes-icon instagram is-medium"></i>
+        </a>
+        <a href="https://youtube.com/@Me.chanicArt" target="_blank" rel="noopener" aria-label="YouTube">
+          <i class="nes-icon youtube is-medium"></i>
+        </a>
+        <a href="https://reddit.com/user/Alternative_Cat7224/" target="_blank" rel="noopener" aria-label="Reddit">
+          <i class="nes-icon reddit is-medium"></i>
+        </a>
+      </div>
+      <div id="winamp-container"></div>
     </aside>
 
   </div>
