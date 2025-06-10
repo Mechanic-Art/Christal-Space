@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href = "styles.css">
+    <title>Prototype</title>
+</head>
+<body>
+    <video id="introVideo" src="assets/whereIsMyFriend.mp4" type="video/mp4"></video>
+
+      <canvas id="canvas1"></canvas>
+      <img id="transitionImage1" src="assets/SUPPR.png">
+      <img id="transitionImage2" src="assets/SUPPR.png">
+      <audio id="transitionSound1" src="assets/sounds/pouleSound.mp3"></audio>
+      <audio id="transitionSound2" src="assets/sounds/chatSound.mp3"></audio>
+    <audio id="gameOverSound" src="assets/sounds/gameOverSound.mp3"></audio>
+    <audio id="startGameSound" src="assets/sounds/gameStartSound.mp3"></audio>
+    <audio id="winSound" src="assets/sounds/winSound.mp3"></audio>
+    <audio id="hitSound" src="assets/sounds/hitSound.mp3"></audio>
+    <audio id="collisionSound" src="assets/sounds/collisionSound.mp3"></audio>
+    <audio id="attackSound" src="assets/sounds/attackSound.mp3"></audio>
+
+    <img id="player" src="assets/player.png">
+    <img id="skyImage" src="assets/fond.png">
+
+    <img id="layer0" src="assets/decor-0/layer-0.png">
+    <img id="layer1" src="assets/decor-0/layer-1.png">
+    <img id="layer2" src="assets/decor-0/layer-2.png">
+    <img id="layer3" src="assets/decor-0/sol.png">
+    <img id="layer4" src="assets/decor-0/mainArbre.png">
+    <img id="enemy_oiseau" src="assets/enemies/oiseau.png">
+    <img id="enemy_liannes" src="assets/enemies/liannes.png">
+    <img id="enemy_poulet" src="assets/enemies/poulet.png">
+
+     <img id="layer2-0" src="assets/decor-1/layer2-0.png">
+    <img id="layer2-1" src="assets/decor-1/layer2-1.png">
+    <img id="layer2-2" src="assets/decor-1/layer2-2.png">
+    <img id="layer2-3" src="assets/decor-1/sol2.png">
+    <img id="layer2-4" src="assets/decor-1/mainarbre2.png">
+    <img id="enemy_chat1" src="assets/enemies/chat1.png">
+    <img id="enemy_chatGluant" src="assets/enemies/chatGluant.png">
+    <img id="enemy_chatTournant" src="assets/enemies/chatTournant.png">
+
+    <img id="layer3-0" src="assets/decor-2/layer3-0.png">
+    <img id="layer3-1" src="assets/decor-2/layer3-1.png">
+    <img id="layer3-2" src="assets/decor-2/layer3-2.png">
+    <img id="layer3-3" src="assets/decor-2/sol3.png">
+    <img id="layer3-4" src="assets/decor-2/mainPierre.png">
+    <img id="enemy_fly" src="assets/enemies/fly.png">
+    <img id="enemy_spider_big" src="assets/enemies/spider_big.png">
+    <img id="enemy_plant" src="assets/enemies/plant.png">
+ 
+    <img id="fire" src="assets/particules/fire.png">
+    <img id="leaf" src="assets/particules/leaf.png">
+    <img id="ice" src="assets/particules/ice.png">
+    <img id="water" src="assets/particules/water.png">
+    <img id="collisionAnimation" src="assets/boom.png">
+    <img id="lives" src="assets/heart.png">
+
+    <div id="game-instructions">
+        <div>
+            <img src="assets/toucheE.png" alt="E pour rouler" />
+            <span>pour rouler</span>
+        </div>
+        <div>
+            <img src="assets/touchesFleches.png" alt="Flèches pour te déplacer" />
+            <span>pour te déplacer</span>
+        </div>
+        <div>
+            <span>Goal : 40 points en 30 secondes !</span>
+        </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
