@@ -124,6 +124,8 @@ h1 {
   max-width: 100%;
   background: transparent;
   padding: 0;
+  margin-top: 0.5rem;
+  /* Réduit l'espace au-dessus du matrix */
 }
 
 #matrix {
@@ -157,7 +159,14 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  gap: 2rem;
+  gap: 1rem;
+  /* Réduit l'espace vertical entre les éléments */
+  height: 800px;
+  width: 750px;
+  /* Hauteur fixe pour toutes les pages */
+  overflow: auto;
+  /* Scroll si le contenu dépasse */
+  box-sizing: border-box;
 }
 
 /* logo 
@@ -262,6 +271,28 @@ h1 {
   margin-bottom: 2rem;
 }
 
+/* Scrollbar personnalisée verte pour tout le site */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #39FF14 #16181b;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  background: #16181b;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #39FF14;
+  border-radius: 8px;
+  border: 2px solid #16181b;
+}
+
+*::-webkit-scrollbar-track {
+  background: #16181b;
+  border-radius: 8px;
+}
+
 /* Responsive : adapte la largeur sur petits écrans */
 @media (max-width: 600px) {
   .main-column {
@@ -285,7 +316,7 @@ div {
 }
 
 .stuff-page img {
-  width: 200px;
+  width: 180px;
   height: auto;
   margin: 0.5rem 1rem 1.5rem 0;
   vertical-align: middle;
@@ -333,4 +364,24 @@ div {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+.accueil-banner {
+  min-height: 120px;
+  /* ajuste la valeur selon ton besoin */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Optionnel : pour éviter que le texte déborde */
+  text-align: center;
+}
+
+.btn-divers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  justify-items: center;
+  align-items: center;
+  margin-top: 2rem; /* Ajoute un espace au-dessus pour descendre les boutons */
+  margin-bottom: 2rem;
 }
